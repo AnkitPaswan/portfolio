@@ -1,0 +1,131 @@
+/* navbar styling */
+
+  .navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 20px 0;
+    font-family: "Ubuntu", sans-serif;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  nav ul{
+    flex:1;
+    text-align: right;
+  }
+  
+  .navbar.sticky {
+    padding: 15px 0;
+    background: var(--nav-color);
+  }
+  .navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar .logo a {
+    color: var(--text-color);
+    font-size: 35px;
+    font-weight: 600;
+  }
+  .navbar .logo a span {
+    color: var(--secondary-color);
+    transition: all 0.3s ease;
+  }
+  .navbar.sticky .logo a span {
+    color: var(--text-color);
+  }
+  .navbar .menu li {
+    list-style: none;
+    display: inline-block;
+  }
+  .navbar .menu li a {
+    display: block;
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 25px;
+    transition: color 0.3s ease;
+  }
+  .cross {
+    display: none;
+  }
+  .navbar .menu li a:hover {
+    color: var(--secondary-color);
+  }
+  .navbar.sticky .menu li a:hover {
+    color: var(--text-color);
+  }
+  /* menu btn styling */
+  .menu-btn {
+    color: var(--text-color);
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+  }
+  .scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: var(--secondary-color);
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  .scroll-up-btn.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .scroll-up-btn:hover {
+    filter: brightness(90%);
+  }
+
+
+  
+  /* media query start */
+  @media screen and (max-width: 768px) {
+   
+    .menu-btn {
+      display: block;
+      font-size: 32px;
+    }
+    .navbar .menu {
+      background: var(--primary-color);
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100vh;
+      padding-top: 80px;
+      z-index: 2;
+      transition: all 0.3s ease;
+    }
+    .navbar .menu li{
+      display: flex;
+      justify-content: center;
+      font-size: 30px;
+      padding: 18px;
+    }
+    .navbar .menu .cross {
+      display: block;
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      font-size: 32px;
+      color: var(--text-color);
+      cursor: pointer;
+    }
+  }

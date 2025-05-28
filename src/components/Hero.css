@@ -1,0 +1,145 @@
+.home {
+  padding-top: 12%;
+  /* display: flex; */
+  /* background-color: #333647; */
+  /* background: url("images/banner.jpg") no-repeat center; */
+  /* height: 100vh; */
+  background: var(--primary-color);
+  color: var(--text-color);
+  min-height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Ubuntu", sans-serif;
+}
+.home-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.home .home-content .text-1 {
+  font-size: 27px;
+}
+.home .home-content .text-2 {
+  font-size: 75px;
+  font-weight: 600;
+  /* margin-left: 13px; */
+}
+.home .home-content .text-3 {
+  font-size: 40px;
+  margin: 5px 0;
+}
+.home .home-content .text-3 span {
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+.typing {
+  font-weight: bold;
+}
+
+.cursor {
+  display: inline-block;
+  background-color: transparent;
+  animation: blink 1s step-start 0s infinite;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.home .home-content .hire  a{
+  display: inline-block;
+  background: var(--secondary-color);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px 30px;
+  margin-top: 40px;
+  border-radius: 6px;
+  border: 2px solid var(--secondary-color);
+  transition: all 0.3s ease;
+}
+.home .home-content a{
+  display: inline-block;
+  color: var(--secondary-color);
+  font-size: 25px;
+  padding: 8px 12px;
+  margin-top: 60px;
+}
+.home .home-content a:hover{
+  color: var(--text-color);
+  background: none;}
+  .social-links{
+    margin-top: 40px;
+    gap: 10px;
+  }
+.home .home-content .right img {
+  padding-left: 50px;
+  padding-bottom: 50px;
+  width: 600px;
+  height: auto;
+}
+
+.home .home-content .hire:hover {
+  color: var(--secondary-color);
+  background: none;
+  cursor: pointer;
+}
+.home .home-content .right .p {
+  color: var(--text-color);
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* media-query starts */
+@media screen and (max-width: 1245px) {
+  .home .home-content .text-2 {
+    font-size: 60px;
+  }
+  .home .home-content .text-3 {
+    font-size: 30px;
+  }
+  .home .home-content .right img {
+    width: 500px;
+    height: auto;
+  }
+
+}
+
+@media screen and (max-width: 1050px) {
+  .home .home-content .text-2 {
+    font-size: 50px;
+  }
+  .home .home-content .text-3 {
+    font-size: 25px;
+  }
+  .home .home-content .right img {
+    width: 400px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    padding-top: 24%
+  }
+ .home{
+  background-image: url('../assets/images/hero_illustration.svg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  
+ }
+  .home .home-content .text-2 {
+    font-size: 50px;
+  }
+  .home .home-content .text-3 {
+    font-size: 25px;
+  }
+  .home .home-content .right img {
+    display: none;
+  }
+}
