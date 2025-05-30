@@ -8,7 +8,7 @@ import portfolioImg from "../assets/images/portfolioImg.png";
 
 const data = [
     {
-      name: "Wather-Application",
+      name: "Weather-Application",
       description: "This Weather Web Application is a sleek and responsive tool that allows users to check real-time weather information for any city in the world. Built using React.js for dynamic UI rendering, styled with Tailwind CSS for modern and responsive design, and powered by the OpenWeather API to fetch accurate and up-to-date weather data, this app combines functionality and user experience in a lightweight package.",
       href:`https://weather-app-ruddy-phi-60.vercel.app/`,
       img: weatherImg,

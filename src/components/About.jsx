@@ -2,7 +2,7 @@
 
 import React from 'react'
 import ProfileImg from '../assets/images/profileImg.png'
-import Resume from '../assets/AnkitResume.pdf'
+import Resume from '../assets/ankit_resume.pdf'
 import './About.css'
 import Typing from '../utils/Typing'
 
