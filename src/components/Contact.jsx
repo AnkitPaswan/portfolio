@@ -1,8 +1,7 @@
 import React from 'react'
 import './Contact.css'
 import { FaUser } from "react-icons/fa";
-import { FaMapMarkerAlt } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 
 export default function Contact() {
   return (
@@ -35,7 +34,7 @@ export default function Contact() {
                             </div>
                         </div>
                         <div className="row">
-                        <MdEmail className='icon'/>
+                        <FaEnvelope className='icon'/>
                             <div className="info">
                                 <div className="head">Email</div>
                                 <div className="sub-title">ankitpaswan192@gmail.com</div>
