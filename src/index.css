@@ -71,9 +71,7 @@ section .title::after {
 
 
 @media screen  and (max-width: 500px) {
-  section{
-    padding: 60px;
-  }
+ 
   .max-width {
     padding: 0 40px;
     margin: auto;
