@@ -69,9 +69,14 @@ section .title::after {
   --text2-color:#e5fcff;
 }
 
+@media screen  and (max-width: 768px){
+  section {
+    padding: 60px 0;
+  }
+}
 
 @media screen  and (max-width: 500px) {
- 
+
   .max-width {
     padding: 0 40px;
     margin: auto;

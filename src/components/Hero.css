@@ -139,14 +139,25 @@
   .home .home-content .text-3 {
     font-size: 25px;
   }
+  .left{
+    margin-top: 50px;
+  }
   .home .home-content .right img {
     display: none;
   }
 }
 
 
-@media screen and (max-width: 768px) {
-  .left{
-    margin-top: 50px;
+@media screen and (max-width: 410px) {
+  .home{
+    background-image: url('../assets/images/hero_illustration.svg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+   }
+  .home .home-content .text-2 {
+    padding: 8px 0;
+    font-size: 32px;
   }
 }
