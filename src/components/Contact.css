@@ -13,6 +13,7 @@
   }
   .contact .contact-content .column {
     width: calc(50% - 30px);
+    padding-top: 50px;
   }
   .contact .contact-content .text {
    color: var(--text2-color);

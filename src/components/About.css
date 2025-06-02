@@ -9,6 +9,9 @@
     background: var(--primary-color);
   }
   .about .about-content .left {
+    padding-top: 50px;
+  }
+  .about .about-content .left {
     width: 45%;
   }
   .about .about-content .left img {
@@ -129,13 +132,19 @@
 
   @media screen and (max-width: 600px){
     .about .about-content .left img {
+      height: 350px;
+      width: 350px;
+    }
+  }
+  @media screen and (max-width: 450px){
+    .about .about-content .left img {
       height: 250px;
       width: 250px;
     }
   }
   @media screen and (max-width: 350px){
     .about .about-content .left img {
-      height: 150px;
-      width: 150px;
+      height: 200px;
+      width: 200px;
     }
   }

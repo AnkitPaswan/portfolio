@@ -10,6 +10,7 @@
   }
   .skills .skills-content .column {
     width: calc(50% - 30px);
+    padding-top: 50px;
   }
   .skills .skills-content .left .text {
     color: var(--text2-color);
@@ -95,15 +96,15 @@
   /* media-query starts */
 
   @media screen and (max-width: 768px){
+    section .title{
+      margin-bottom: 5px;
+    }
     .skills .skills-content {
       flex-direction: column;
       align-items: center;
     }
     .skills .skills-content .column {
       width: 100%;
-    }
-    .skills .skills-content .left {
-      padding-top: 14%;
     }
     .skills .skills-content .left img {
       height: 300px;
