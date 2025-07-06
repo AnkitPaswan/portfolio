@@ -24,7 +24,7 @@ const Header = () => {
             <div className="logo"><a href="#">Portfo<span>lio</span></a></div>
             <ul className="menu" id="menu">
                 <li><a href="#home" className="menu-btn" onClick={closeMenu}>Home</a></li>
-                <li><a href="#about" className="menu-btn">About</a></li>
+                <li><a href="#about" className="menu-btn" onClick={closeMenu}>About</a></li>
                 <li><a href="#skills" className="menu-btn" onClick={closeMenu}>Skills</a></li>
                 <li><a href="#works" className="menu-btn" onClick={closeMenu}>Works</a></li>
                 <li><a href="#contact" className="menu-btn" onClick={closeMenu}>Contact</a></li>

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./Work.css";
 import data from "../utils/WorksData";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "motion/react";
 
 let count = 0;
 
@@ -19,51 +21,58 @@ const Work = () => {
   };
   return (
     <section className="works" id="works">
-      <div className="max-width">
-        <h2 className="title">Works</h2>
-        <div className="works-content">
-          <div className="column left">
-            <div className="nav-controls">
-              <button className="nav-btn" onClick={handleOnPrevClick}>
-                &#8592;
-              </button>
-              <span className="counter">
-                0{count + 1}/0{data.length}
-              </span>
-              <button className="nav-btn" onClick={handleOnNextClick}>
-                &#8594;
-              </button>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        transition={{ duration: 1.2 }}
+        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+        viewport={{ once: false }}
+      >
+        <div className="max-width">
+          <h2 className="title">Works</h2>
+          <div className="works-content">
+            <div className="column left">
+              <div className="nav-controls">
+                <button className="nav-btn" onClick={handleOnPrevClick}>
+                  &#8592;
+                </button>
+                <span className="counter">
+                  0{count + 1}/0{data.length}
+                </span>
+                <button className="nav-btn" onClick={handleOnNextClick}>
+                  &#8594;
+                </button>
+              </div>
+              <h1 className="work-title">{data[currentIndex].name}</h1>
+              <p className="description">
+                <strong>{data[currentIndex].name}</strong>{" "}
+                {data[currentIndex].description}
+              </p>
+              <a
+                className="visit-button"
+                href={data[currentIndex].href}
+                target="_blank"
+              >
+                Visit Site
+              </a>
             </div>
-            <h1 className="work-title">{data[currentIndex].name}</h1>
-            <p className="description">
-              <strong>{data[currentIndex].name}</strong>{" "}
-              {data[currentIndex].description}
-            </p>
-            <a
-              className="visit-button"
-              href={data[currentIndex].href}
-              target="_blank"
-            >
-              Visit Site
-            </a>
-          </div>
 
-          <div className="column right">
-            <div
-              className="mockup-wrapper"
-              style={{
-                background: data[currentIndex].backgound || "transparent",
-              }}
-            >
-              <img
-                src={data[currentIndex].img}
-                alt="DevBlogs Screenshot"
-                className="mockup-img"
-              />
+            <div className="column right">
+              <div
+                className="mockup-wrapper"
+                style={{
+                  background: data[currentIndex].backgound || "transparent",
+                }}
+              >
+                <img
+                  src={data[currentIndex].img}
+                  alt="DevBlogs Screenshot"
+                  className="mockup-img"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -63,6 +63,7 @@ section .title::after {
 }
 
 :root{
+  scroll-behavior: smooth;
   --primary-color: #141628;
   --secondary-color: #FB4370;
   --text-color: #fff;

@@ -1,12 +1,21 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import './Contact.css'
 import { FaUser } from "react-icons/fa";
 import { FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
+import { motion } from "motion/react"
+
 
 export default function Contact() {
   return (
    <>
     <section className="contact" id="contact">
+    <motion.div
+         initial={{ opacity: 0, y: 100 }}
+         transition={{ duration: 1.2 }}
+         whileInView={{ opacity: 1, scale: 1, y: 0 }}
+         viewport={{ once: false }}
+      >
         <div className="max-width">
             <h2 className="title">Contact me</h2>
             <div className="contact-content">
@@ -67,6 +76,7 @@ export default function Contact() {
                 </div>
             </div>
         </div>
+        </motion.div>
     </section>
    </>
   )
