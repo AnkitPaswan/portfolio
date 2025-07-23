@@ -79,6 +79,9 @@
   .skills-content .right .js::before {
     width: 90%;
   }
+  .skills-content .right .ts::before {
+    width: 60%;
+  }
   .skills-content .right .react::before {
     width: 80%;
   }
