@@ -1,7 +1,7 @@
 import React from "react";
 import "./Hero.css";
 import HeroImg from "../assets/images/hero_illustration.svg";
-import { FaFacebookF } from "react-icons/fa";
+import { FaFacebookF,FaArrowDown } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
@@ -73,6 +73,11 @@ export default function Hero() {
             <div className="column right">
               <img src={HeroImg} id="image" />
             </div>
+          </div>
+          <div className="down-btn">
+            <a href="#about"> 
+              <FaArrowDown className="icon" />
+            </a>
           </div>
         </div>
       </motion.div>

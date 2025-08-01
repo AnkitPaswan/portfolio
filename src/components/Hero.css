@@ -10,7 +10,10 @@
   background-size: cover;
   background-attachment: fixed;
   font-family: "Ubuntu", sans-serif;
+  position: relative;
+  overflow: hidden;
 }
+
 .home-content {
   display: flex;
   flex-direction: row;
@@ -80,7 +83,16 @@
   padding-bottom: 50px;
   width: 600px;
   height: auto;
+  animation: move 3s infinite ease alternate;
 }
+@keyframes move {
+  from {
+    transform: translateY(-10px);
+    }
+ to {
+      transform: translateY(10px);
+      }
+      }
 
 .home .home-content .hire:hover {
   color: var(--secondary-color);
@@ -92,6 +104,28 @@
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 10px;
+}
+
+.down-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: transparent;
+  animation: move-arr 1s ease-in-out infinite alternate;
+}
+.down-btn a{
+  color: var(--text-color);
+  font-size: 25px;
+}
+
+@keyframes move-arr {
+  0% {
+    transform: translateY(-12px);
+    }
+    100% {
+      transform: translateY(12px);
+      }
 }
 
 /* media-query starts */
@@ -143,6 +177,9 @@
     margin-top: 50px;
   }
   .home .home-content .right img {
+    display: none;
+  }
+  .down-btn{
     display: none;
   }
 }
