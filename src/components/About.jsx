@@ -1,6 +1,6 @@
 import React from "react";
 import ProfileImg from "../assets/images/myimage.png";
-import Resume from "../assets/ankit_paswan_resume.pdf";
+import Resume from "../assets/Ankit_Resume.pdf";
 import "./About.css";
 import Typing from "../utils/Typing";
 // eslint-disable-next-line no-unused-vars
