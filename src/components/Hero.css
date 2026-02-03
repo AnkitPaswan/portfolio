@@ -207,31 +207,43 @@
 
 .profile-wrapper {
   position: relative;
-  width: 380px;
-  height: 380px;
+  width: 420px;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.profile-glow {
+/* Gradient Rings */
+.gradient-ring {
   position: absolute;
-  inset: -20px;
-  background: var(--accent-gradient);
   border-radius: 50%;
-  filter: blur(60px);
-  opacity: 0.4;
-  animation: pulse-glow 3s ease-in-out infinite;
+  border: 2px solid transparent;
+  animation: rotate-ring 15s linear infinite;
 }
 
-@keyframes pulse-glow {
-  0%, 100% { opacity: 0.4; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.05); }
+.gradient-ring.ring-1 {
+  inset: -15px;
+  background: linear-gradient(45deg, #6366f1, #a855f7, #ec4899) border-box;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation-duration: 20s;
 }
 
-.profile-ring {
-  position: absolute;
-  inset: 0;
-  border: 2px solid var(--border-color);
-  border-radius: 50%;
-  animation: rotate-ring 20s linear infinite;
+.gradient-ring.ring-2 {
+  inset: -30px;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  animation-duration: 25s;
+  animation-direction: reverse;
+}
+
+.gradient-ring.ring-3 {
+  inset: -45px;
+  border: 1px dashed rgba(168, 85, 247, 0.2);
+  animation-duration: 30s;
 }
 
 @keyframes rotate-ring {
@@ -239,15 +251,32 @@
   to { transform: rotate(360deg); }
 }
 
+/* Profile Glow */
+.profile-glow {
+  position: absolute;
+  inset: 0;
+  background: var(--accent-gradient);
+  border-radius: 50%;
+  filter: blur(50px);
+  opacity: 0.35;
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.05); }
+}
+
 .profile-image {
-  width: 100%;
-  height: 100%;
+  width: 320px;
+  height: 320px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid rgba(255, 255, 255, 0.1);
+  border: 4px solid rgba(255, 255, 255, 0.15);
   position: relative;
-  z-index: 1;
+  z-index: 2;
   background: var(--bg-secondary);
+  box-shadow: 0 0 60px rgba(99, 102, 241, 0.2);
 }
 
 /* Floating Badges */
@@ -262,28 +291,29 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 18px;
+  padding: 10px 16px;
   background: var(--bg-glass);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-full);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--text-primary);
-  box-shadow: var(--shadow-lg), 0 0 20px rgba(99, 102, 241, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   z-index: 3;
   overflow: hidden;
   cursor: default;
+  transition: all 0.3s ease;
 }
 
-.badge-glow {
+.badge-icon-bg {
   position: absolute;
   inset: 0;
-  opacity: 0;
+  opacity: 0.5;
   transition: opacity 0.3s ease;
 }
 
-.floating-badge:hover .badge-glow {
+.floating-badge:hover .badge-icon-bg {
   opacity: 1;
 }
 
@@ -301,96 +331,74 @@
   white-space: nowrap;
 }
 
-/* Badge positions - 8 badges around the profile */
-.badge-1 {
-  top: 2%;
-  right: -5px;
-  animation: float-1 4s ease-in-out infinite;
+/* Badge Positions - All 4 corners + 2 sides */
+.badge-top-right {
+  top: 0%;
+  right: -15%;
+  animation: float-top-right 5s ease-in-out infinite;
 }
 
-.badge-2 {
-  top: 25%;
-  left: -60px;
-  animation: float-2 4.5s ease-in-out infinite;
+.badge-top-left {
+  top: 0%;
+  left: -15%;
+  animation: float-top-left 5.5s ease-in-out infinite;
 }
 
-.badge-3 {
-  bottom: 28%;
-  right: -5px;
-  animation: float-3 3.8s ease-in-out infinite;
+.badge-bottom-right {
+  bottom: 0%;
+  right: -15%;
+  animation: float-bottom-right 4.5s ease-in-out infinite;
 }
 
-.badge-4 {
-  bottom: 2%;
-  left: -40px;
-  animation: float-4 4.2s ease-in-out infinite;
+.badge-bottom-left {
+  bottom: 0%;
+  left: -15%;
+  animation: float-bottom-left 5s ease-in-out infinite;
 }
 
-.badge-5 {
-  top: 48%;
-  right: -70px;
+.badge-right-center {
+  top: 50%;
+  right: -18%;
   transform: translateY(-50%);
-  animation: float-5 4s ease-in-out infinite;
+  animation: float-right-center 4.8s ease-in-out infinite;
 }
 
-.badge-6 {
-  top: 12%;
-  left: -10px;
-  animation: float-6 3.5s ease-in-out infinite;
-}
-
-.badge-7 {
-  bottom: 12%;
-  right: -50px;
-  animation: float-7 4.3s ease-in-out infinite;
-}
-
-.badge-8 {
-  top: 65%;
-  left: -70px;
+.badge-left-center {
+  top: 50%;
+  left: -18%;
   transform: translateY(-50%);
-  animation: float-8 4.1s ease-in-out infinite;
+  animation: float-left-center 5.2s ease-in-out infinite;
 }
 
-/* Floating animations */
-@keyframes float-1 {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+/* Floating Animations */
+@keyframes float-top-right {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-8px, -12px); }
 }
 
-@keyframes float-2 {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(12px); }
+@keyframes float-top-left {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(8px, -12px); }
 }
 
-@keyframes float-3 {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+@keyframes float-bottom-right {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-8px, 12px); }
 }
 
-@keyframes float-4 {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(10px); }
+@keyframes float-bottom-left {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(8px, 12px); }
 }
 
-@keyframes float-5 {
-  0%, 100% { transform: translateY(-50%); }
-  50% { transform: translateY(calc(-50% - 12px)); }
+@keyframes float-right-center {
+  0%, 100% { transform: translateY(-50%) translateX(0); }
+  50% { transform: translateY(-50%) translateX(-8px); }
 }
 
-@keyframes float-6 {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
-@keyframes float-7 {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(10px); }
-}
-
-@keyframes float-8 {
-  0%, 100% { transform: translateY(-50%); }
-  50% { transform: translateY(calc(-50% - 10px)); }
+@keyframes float-left-center {
+  0%, 100% { transform: translateY(-50%) translateX(0); }
+  50% { transform: translateY(-50%) translateX(8px); }
 }
 
 /* Scroll Indicator */
@@ -448,8 +456,13 @@
   }
 
   .profile-wrapper {
-    width: 320px;
-    height: 320px;
+    width: 340px;
+    height: 340px;
+  }
+
+  .profile-image {
+    width: 260px;
+    height: 260px;
   }
 
   .hero-cta {
@@ -467,44 +480,6 @@
   .scroll-indicator {
     display: none;
   }
-
-  .badge-1 {
-    top: 5%;
-    right: 0px;
-  }
-
-  .badge-2 {
-    top: 25%;
-    left: -30px;
-  }
-
-  .badge-3 {
-    bottom: 25%;
-    right: 0px;
-  }
-
-  .badge-4 {
-    bottom: 5%;
-    left: -20px;
-  }
-
-  .badge-5 {
-    right: -30px;
-  }
-
-  .badge-6 {
-    top: 10%;
-    left: 5px;
-  }
-
-  .badge-7 {
-    bottom: 8%;
-    right: -20px;
-  }
-
-  .badge-8 {
-    left: -30px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -515,55 +490,48 @@
   }
 
   .profile-wrapper {
-    width: 280px;
-    height: 280px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .profile-image {
+    width: 230px;
+    height: 230px;
+  }
+
+  .gradient-ring {
+    display: none;
   }
 
   .floating-badge {
-    padding: 8px 12px;
+    padding: 8px 14px;
     font-size: 12px;
+    gap: 6px;
   }
 
-  .badge-icon {
-    font-size: 14px;
+  .badge-icon svg {
+    width: 16px;
+    height: 16px;
   }
 
-  .badge-1 {
-    top: 0%;
-    right: -5px;
+  .badge-top-right {
+    top: 2%;
+    right: 0%;
   }
 
-  .badge-2 {
-    top: 20%;
-    left: -20px;
+  .badge-top-left {
+    top: 2%;
+    left: 0%;
   }
 
-  .badge-3 {
-    bottom: 20%;
-    right: -5px;
+  .badge-bottom-right {
+    bottom: 2%;
+    right: 0%;
   }
 
-  .badge-4 {
-    bottom: 0%;
-    left: -15px;
-  }
-
-  .badge-5 {
-    right: -20px;
-  }
-
-  .badge-6 {
-    top: 8%;
-    left: 0px;
-  }
-
-  .badge-7 {
-    bottom: 6%;
-    right: -15px;
-  }
-
-  .badge-8 {
-    left: -20px;
+  .badge-bottom-left {
+    bottom: 2%;
+    left: 0%;
   }
 
   .hero-cta .btn {
@@ -606,13 +574,55 @@
   }
 
   .profile-wrapper {
-    width: 220px;
-    height: 220px;
+    width: 260px;
+    height: 260px;
   }
 
-  .badge-2,
-  .badge-4 {
-    display: none;
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .floating-badge {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+  .badge-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .badge-top-right {
+    top: 0%;
+    right: -5%;
+  }
+
+  .badge-top-left {
+    top: 0%;
+    left: -5%;
+  }
+
+  .badge-bottom-right {
+    bottom: 0%;
+    right: -5%;
+  }
+
+  .badge-bottom-left {
+    bottom: 0%;
+    left: -5%;
+  }
+
+  .badge-right-center {
+    top: 50%;
+    right: -8%;
+    transform: translateY(-50%);
+  }
+
+  .badge-left-center {
+    top: 50%;
+    left: -8%;
+    transform: translateY(-50%);
   }
 }
 

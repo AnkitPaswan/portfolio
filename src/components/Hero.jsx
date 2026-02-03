@@ -2,14 +2,23 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import './Hero.css';
 import ProfileImg from '../assets/images/myimage.png';
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope, FaReact, FaNodeJs, FaJs } from 'react-icons/fa';
-import { SiNextdotjs, SiRedux, SiMongodb, SiExpress, SiTypescript } from 'react-icons/si';
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope, FaReact, FaNodeJs } from 'react-icons/fa';
+import { SiNextdotjs, SiMongodb, SiExpress, SiTypescript } from 'react-icons/si';
 
 const roles = [
   'Full Stack Developer',
   'MERN Stack Expert',
   'UI/UX Designer',
   'Freelancer'
+];
+
+const floatingBadges = [
+  { icon: FaReact, color: '#61DAFB', name: 'React', position: 'top-right' },
+  { icon: SiNextdotjs, color: '#FFFFFF', name: 'Next.js', position: 'top-left' },
+  { icon: FaNodeJs, color: '#339933', name: 'Node.js', position: 'bottom-right' },
+  { icon: SiExpress, color: '#FFFFFF', name: 'Express', position: 'bottom-left' },
+  { icon: SiMongodb, color: '#47A248', name: 'MongoDB', position: 'right-center' },
+  { icon: SiTypescript, color: '#3178C6', name: 'TypeScript', position: 'left-center' },
 ];
 
 const Hero = () => {
@@ -26,10 +35,10 @@ const Hero = () => {
     <section className="hero" id="home" ref={containerRef}>
       {/* Animated Background */}
       <div className="hero-bg">
-        <div className="gradient-orb orb-1" />
-        <div className="gradient-orb orb-2" />
-        <div className="gradient-orb orb-3" />
-        <div className="grid-overlay" />
+        <div className="gradient-orb orb-1"></div>
+        <div className="gradient-orb orb-2"></div>
+        <div className="gradient-orb orb-3"></div>
+        <div className="grid-overlay"></div>
       </div>
 
       <motion.div 
@@ -43,7 +52,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="badge-dot" />
+            <span className="badge-dot"></span>
             Available for hire
           </motion.div>
 
@@ -151,104 +160,43 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <div className="profile-wrapper">
-            <div className="profile-glow" />
-            <div className="profile-ring" />
+            {/* Gradient Rings */}
+            <div className="gradient-ring ring-1"></div>
+            <div className="gradient-ring ring-2"></div>
+            <div className="gradient-ring ring-3"></div>
+            
+            {/* Profile Glow */}
+            <div className="profile-glow"></div>
+            
             <motion.img 
               src={ProfileImg} 
               alt="Ankit Paswan" 
               className="profile-image"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.03 }}
               transition={{ type: 'spring', stiffness: 300 }}
             />
+            
+            {/* Floating Tech Badges */}
             <div className="floating-badges">
-              <motion.div 
-                className="floating-badge badge-1"
-                initial={{ opacity: 0, scale: 0, x: -20 }}
-                animate={{ opacity: 1, scale: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                whileHover={{ scale: 1.1, y: -5 }}
-              >
-                <div className="badge-glow" style={{ background: 'radial-gradient(circle, rgba(97,218,251,0.4) 0%, transparent 70%)' }} />
-                <span className="badge-icon"><FaReact color="#61DAFB" size={20} /></span>
-                <span className="badge-text">React</span>
-              </motion.div>
-              <motion.div 
-                className="floating-badge badge-2"
-                initial={{ opacity: 0, scale: 0, x: -20 }}
-                animate={{ opacity: 1, scale: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.7 }}
-                whileHover={{ scale: 1.1, y: -5 }}
-              >
-                <div className="badge-glow" style={{ background: 'radial-gradient(circle, rgba(0,0,0,0.4) 0%, transparent 70%)' }} />
-                <span className="badge-icon"><SiNextdotjs color="#FFFFFF" size={20} /></span>
-                <span className="badge-text">Next.js</span>
-              </motion.div>
-              <motion.div 
-                className="floating-badge badge-3"
-                initial={{ opacity: 0, scale: 0, x: -20 }}
-                animate={{ opacity: 1, scale: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.9 }}
-                whileHover={{ scale: 1.1, y: -5 }}
-              >
-                <div className="badge-glow" style={{ background: 'radial-gradient(circle, rgba(247,223,30,0.4) 0%, transparent 70%)' }} />
-                <span className="badge-icon"><FaJs color="#F7DF1E" size={20} /></span>
-                <span className="badge-text">JavaScript</span>
-              </motion.div>
-              <motion.div 
-                className="floating-badge badge-4"
-                initial={{ opacity: 0, scale: 0, x: -20 }}
-                animate={{ opacity: 1, scale: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 1.1 }}
-                whileHover={{ scale: 1.1, y: -5 }}
-              >
-                <div className="badge-glow" style={{ background: 'radial-gradient(circle, rgba(118,74,188,0.4) 0%, transparent 70%)' }} />
-                <span className="badge-icon"><SiRedux color="#764ABC" size={20} /></span>
-                <span className="badge-text">Redux</span>
-              </motion.div>
-              <motion.div 
-                className="floating-badge badge-5"
-                initial={{ opacity: 0, scale: 0, x: -20 }}
-                animate={{ opacity: 1, scale: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 1.3 }}
-                whileHover={{ scale: 1.1, y: -5 }}
-              >
-                <div className="badge-glow" style={{ background: 'radial-gradient(circle, rgba(51,153,51,0.4) 0%, transparent 70%)' }} />
-                <span className="badge-icon"><FaNodeJs color="#339933" size={20} /></span>
-                <span className="badge-text">Node.js</span>
-              </motion.div>
-              <motion.div 
-                className="floating-badge badge-6"
-                initial={{ opacity: 0, scale: 0, x: -20 }}
-                animate={{ opacity: 1, scale: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 1.5 }}
-                whileHover={{ scale: 1.1, y: -5 }}
-              >
-                <div className="badge-glow" style={{ background: 'radial-gradient(circle, rgba(71,162,72,0.4) 0%, transparent 70%)' }} />
-                <span className="badge-icon"><SiMongodb color="#47A248" size={20} /></span>
-                <span className="badge-text">MongoDB</span>
-              </motion.div>
-              <motion.div 
-                className="floating-badge badge-7"
-                initial={{ opacity: 0, scale: 0, x: -20 }}
-                animate={{ opacity: 1, scale: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 1.7 }}
-                whileHover={{ scale: 1.1, y: -5 }}
-              >
-                <div className="badge-glow" style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%)' }} />
-                <span className="badge-icon"><SiExpress color="#FFFFFF" size={20} /></span>
-                <span className="badge-text">Express</span>
-              </motion.div>
-              <motion.div 
-                className="floating-badge badge-8"
-                initial={{ opacity: 0, scale: 0, x: -20 }}
-                animate={{ opacity: 1, scale: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 1.9 }}
-                whileHover={{ scale: 1.1, y: -5 }}
-              >
-                <div className="badge-glow" style={{ background: 'radial-gradient(circle, rgba(49,120,198,0.4) 0%, transparent 70%)' }} />
-                <span className="badge-icon"><SiTypescript color="#3178C6" size={20} /></span>
-                <span className="badge-text">TypeScript</span>
-              </motion.div>
+              {floatingBadges.map((badge, index) => (
+                <motion.div
+                  key={badge.name}
+                  className={`floating-badge badge-${badge.position}`}
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.5 + (index * 0.15) }}
+                  whileHover={{ scale: 1.1, y: -5 }}
+                >
+                  <div 
+                    className="badge-icon-bg"
+                    style={{ background: `radial-gradient(circle, ${badge.color}33 0%, transparent 70%)` }}
+                  ></div>
+                  <span className="badge-icon">
+                    <badge.icon color={badge.color} size={18} />
+                  </span>
+                  <span className="badge-text">{badge.name}</span>
+                </motion.div>
+              ))}
             </div>
           </div>
         </motion.div>
@@ -266,7 +214,7 @@ const Hero = () => {
             className="scroll-dot"
             animate={{ y: [0, 30, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-          />
+          ></motion.div>
         </div>
       </motion.div>
     </section>

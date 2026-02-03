@@ -12,8 +12,11 @@ const categories = [
 ];
 
 const projectTechBadges = {
-  'Tech-market': ['React.js', 'Node.js', 'Express', 'MongoDB', 'Stripe'],
-  'Vegan-food': ['React.js', 'Node.js', 'Express', 'MongoDB', 'Payment'],
+  'Trader\'s Blog': ['React.js', 'Node.js', 'Express', 'MongoDB','Redis', 'Recharts', 'TipTap', 'JWT', 'Axios', 'Postman', 'Git', 'GitHub', 'Responsive Design'],
+  'NeoTreasure': ['React.js', 'Node.js', 'Express', 'MongoDB','Mongoose','Redux Toolkit', 'Tailwind CSS','ethers.js', 'JWT', 'WebSocket','OpenSea API', 'Axios','Postman', 'Git', 'GitHub','Framer Motion','Responsive Design'],
+  'Techie-Tutorials': ['React.js', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS', 'Axios','Postman', 'Git', 'GitHub', 'TipTap','Rich Text Editor', 'Responsive Design'],
+  'Tech-market': ['React.js','TypeScript', 'Node.js', 'Express', 'MongoDB', 'Stripe', 'Tailwind CSS', 'Axios', 'Postman','Git', 'GitHub', 'Responsive Design'],
+  'Vegan-food': ['React.js', 'Node.js', 'Express', 'MongoDB','CSS', 'Stripe','Canva', 'Git', 'GitHub'],
   'Weather-Application': ['React.js', 'Tailwind CSS', 'OpenWeather API'],
   'To-Do List': ['React.js', 'CSS', 'Bootstrap', 'LocalStorage'],
   'Personal Portfolio': ['React.js', 'CSS', 'Framer Motion'],
@@ -28,7 +31,7 @@ const Work = () => {
     ? data 
     : data.filter(project => {
         if (activeCategory === 'fullstack') {
-          return ['Tech-market', 'Vegan-food'].includes(project.name);
+          return ['Trader\'s Blog','NeoTreasure', 'Techie-Tutorials', 'Tech-market', 'Vegan-food'].includes(project.name);
         }
         if (activeCategory === 'frontend') {
           return ['Weather-Application', 'To-Do List', 'NewsPortal'].includes(project.name);

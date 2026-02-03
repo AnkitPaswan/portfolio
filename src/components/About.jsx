@@ -13,6 +13,24 @@ const stats = [
 
 const timelineItems = [
   {
+    year: '2025-Present',
+    title: 'Full Stack (MERN) Developer',
+    institution: 'Dream Viewer Infotech',
+    description: 'Currently working as Full Stack MERN Developer. Joined in August 2025, working from office on exciting projects using React, Node.js, Express, and MongoDB.',
+  },
+  {
+    year: '2024-2025',
+    title: 'Web Development Intern',
+    institution: 'Apana Time Tech Solutions',
+    description: 'Completed 6-month remote internship as Web Development Intern. Gained hands-on experience in web development technologies and contributed to real-world projects.',
+  },
+  {
+    year: '2024',
+    title: 'MERN Stack Developer Trainee',
+    institution: 'Ducat',
+    description: 'Completed 6-month internship training as MERN Stack Developer. Worked under the guidance of Mr. Deepak Singh Gussain, gaining hands-on experience in React, Node.js, Express, and MongoDB development.',
+  },
+  {
     year: '2024',
     title: 'Bachelor\'s Degree',
     institution: 'I.K.G. Punjab Technical University',
@@ -123,7 +141,9 @@ const About = () => {
                 A passionate Web Designer, Front-end Developer, MERN Stack Developer, 
                 and Freelancer from Madhubani Dist, Bihar, India. I graduated with a 
                 Bachelor's Degree in Computer Science from I.K.G. Punjab Technical 
-                University (IKGPTU) in 2024.
+                University (IKGPTU) in 2024. Currently working as Full Stack (MERN) Developer 
+                at Dream Viewer Infotech since August 2025 (Work from Office). Previously 
+                completed internships at Ducat and Apana Time Tech Solutions.
               </p>
               <p className="bio-text">
                 I love combining the world of logic and creative design to make 
@@ -187,7 +207,7 @@ const About = () => {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
                     <div className="timeline-dot" />
-                    <div className="timeline-content">
+                    <div className="timeline-content glass-card">
                       <span className="timeline-year">{item.year}</span>
                       <h4 className="timeline-title-item">{item.title}</h4>
                       <span className="timeline-institution">{item.institution}</span>

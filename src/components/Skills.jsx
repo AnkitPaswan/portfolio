@@ -7,9 +7,9 @@ import {
 } from 'react-icons/fa';
 import { 
   SiTypescript, SiTailwindcss, SiRedux, SiExpress, SiMongodb,
-  SiNextdotjs, SiFirebase, SiVercel, SiPostman, SiFigma
+  SiNextdotjs, SiFirebase, SiVercel, SiPostman, SiFigma,SiRedis,SiSocketdotio
 } from 'react-icons/si';
-
+import { VscVscode } from "react-icons/vsc";
 const skillCategories = [
   { id: 'all', label: 'All Skills' },
   { id: 'frontend', label: 'Frontend' },
@@ -25,7 +25,7 @@ const skillsData = [
   { name: 'HTML5', icon: FaHtml5, level: 95, category: 'frontend', color: '#E34F26' },
   { name: 'CSS3', icon: FaCss3, level: 93, category: 'frontend', color: '#1572B6' },
   { name: 'Tailwind CSS', icon: SiTailwindcss, level: 88, category: 'frontend', color: '#06B6D4' },
-  { name: 'Redux', icon: SiRedux, level: 85, category: 'frontend', color: '#764ABC' },
+  { name: 'Redux Toolkit', icon: SiRedux, level: 85, category: 'frontend', color: '#764ABC' },
   { name: 'Next.js', icon: SiNextdotjs, level: 70, category: 'frontend', color: '#000000' },
   
   // Backend
@@ -33,7 +33,9 @@ const skillsData = [
   { name: 'Express.js', icon: SiExpress, level: 88, category: 'backend', color: '#FFFFFF' },
   { name: 'MongoDB', icon: SiMongodb, level: 85, category: 'backend', color: '#47A248' },
   { name: 'REST APIs', icon: FaServer, level: 90, category: 'backend', color: '#FF6B6B' },
-  { name: 'Firebase', icon: SiFirebase, level: 75, category: 'backend', color: '#FFCA28' },
+  { name: 'Socket.io', icon: SiSocketdotio, level: 65, category: 'backend', color: '#FFFFFF' },
+    { name: 'Redis', icon: SiRedis, level: 80, category: 'backend', color: '#C6302B' },
+
   
   // Tools & Others
   { name: 'Git', icon: FaGitAlt, level: 88, category: 'tools', color: '#F05032' },
@@ -41,6 +43,7 @@ const skillsData = [
   { name: 'Figma', icon: SiFigma, level: 70, category: 'tools', color: '#F24E1E' },
   { name: 'Postman', icon: SiPostman, level: 85, category: 'tools', color: '#FF6C37' },
   { name: 'Vercel', icon: SiVercel, level: 80, category: 'tools', color: '#000000' },
+  { name: 'VS Code', icon: VscVscode, level: 100, category: 'tools', color: '#24AEF3' },
 ];
 
 const Skills = () => {

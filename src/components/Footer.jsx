@@ -22,7 +22,7 @@ const Footer = () => {
   ];
 
   const skills = [
-    'React.js', 'Node.js','Express.js', 'MongoDB','JavaScript', 'TypeScript','Tailwind CSS', 'Git', 'REST APIs'
+    'React.js','Next.js', 'Node.js','Express.js', 'MongoDB','JavaScript', 'TypeScript','Tailwind CSS', 'Git/GitHub', 'REST APIs'
   ];
 
   return (

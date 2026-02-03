@@ -65,7 +65,7 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Ankit<span className="highlight">.</span>
+           Ankit<span className="highlight">.</span>
           </motion.a>
 
           {/* Desktop Navigation */}

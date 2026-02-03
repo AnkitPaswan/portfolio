@@ -248,7 +248,13 @@
 }
 
 .timeline-content {
-  padding-left: 10px;
+  padding: 20px;
+  padding-left: 35px;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateX(5px);
 }
 
 .timeline-year {
@@ -305,34 +311,6 @@
 
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-
-  .stat-card {
-    padding: 20px 16px;
-  }
-
-  .stat-number {
-    font-size: 28px;
-  }
-
-  .bio-section {
-    padding: 24px;
-  }
-
-  .about-cta {
-    flex-direction: column;
-  }
-
-  .about-cta .btn {
-    width: 100%;
-    justify-content: center;
   }
 }
 
