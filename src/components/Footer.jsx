@@ -37,7 +37,7 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="footer-logo">Ankit<span>.</span></h2>
+            <h2 className="footer-logo">Er<span>.</span> Ankit</h2>
             <p className="footer-tagline">
               Passionate Full Stack Developer crafting beautiful and functional digital experiences.
             </p>
