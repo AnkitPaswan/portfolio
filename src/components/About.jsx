@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './About.css';
-import ProfileImg from '../assets/images/myimage.png';
+import ProfileImg from '../assets/images/profile.png';
 import Resume from '../assets/Ankit_Resume.pdf';
 
 const stats = [

@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import './Hero.css';
-import ProfileImg from '../assets/images/myimage.png';
+import ProfileImg from '../assets/images/profile.png';
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope, FaReact, FaNodeJs } from 'react-icons/fa';
 import { SiNextdotjs, SiMongodb, SiExpress, SiTypescript } from 'react-icons/si';
 
