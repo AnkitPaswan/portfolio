@@ -32,7 +32,7 @@ const Work = () => {
     ? data 
     : data.filter(project => {
         if (activeCategory === 'fullstack') {
-          return ['Trader\'s Blog','NeoTreasure', 'Techie-Tutorials', 'Tech-market', 'Vegan-food'].includes(project.name);
+          return ['Dreamviewer360','Trader\'s Blog','NeoTreasure', 'Techie-Tutorials', 'Tech-market', 'Vegan-food'].includes(project.name);
         }
         if (activeCategory === 'frontend') {
           return ['Weather-Application', 'To-Do List', 'NewsPortal'].includes(project.name);
