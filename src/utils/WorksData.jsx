@@ -7,8 +7,17 @@ import techmarketImg from "../assets/images/tectmarket.png";
 import tecttutorials from "../assets/images/tutorials.png";
 import nft from "../assets/images/nft.png";
 import blogs from "../assets/images/blogs.png";
+import hrms from "../assets/images/hrms.png";
+import ttpl from "../assets/images/ttpl.png";
+import ttfixon from "../assets/images/ttfixon.png";
 
 const data = [
+  {
+    name: "Dreamviewer360 - HRMS platform",
+    href: `https://www.dreamviewer360.com/`,
+    description:"Developed Dreamviewer360, a full-stack ERP/HRMS application for man-aging multi-organization workforce operations, including employee onboarding, role-based access control, GPS/face/biometric attendance, leave and overtime workflows, automated payroll, salary slips, task sheets, and HR documentation. Built responsive dashboards with real-time chat, notifications, calendar reminders, file management, and project/unit/ department-wise reporting.",
+    img: hrms,
+  },
   {
     name: "Trader's Blog",
     href: `https://blogs-ivory-five.vercel.app/`,
