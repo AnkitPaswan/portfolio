@@ -13,6 +13,12 @@ import ttfixon from "../assets/images/ttfixon.png";
 
 const data = [
   {
+    name: "TTPLINX – Construction Management ERP",
+    href: `https://www.dreamviewer360.com/`,
+    description:"Developed a full-stack, multi-tenant Construction ERP platform that centralizes project execution, procurement, workforce operations, inventory, finance, and stakeholder collaboration. Built role-based dashboards and secure portals for administrators, employees, clients, vendors, and subcontractors, with workflows for BOQ management, tenders/RFQs, purchase orders, attendance, payroll, approvals, invoicing, quality audits, and HSE compliance",
+    img: ttpl,
+  },
+  {
     name: "Dreamviewer360 - HRMS platform",
     href: `https://www.dreamviewer360.com/`,
     description:"Developed Dreamviewer360, a full-stack ERP/HRMS application for man-aging multi-organization workforce operations, including employee onboarding, role-based access control, GPS/face/biometric attendance, leave and overtime workflows, automated payroll, salary slips, task sheets, and HR documentation. Built responsive dashboards with real-time chat, notifications, calendar reminders, file management, and project/unit/ department-wise reporting.",

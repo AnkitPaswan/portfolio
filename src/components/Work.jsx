@@ -12,7 +12,8 @@ const categories = [
 ];
 
 const projectTechBadges = {
-  'Dreamviewer360': ['Next.js', 'Tailwind css', 'Node.js', 'Express', 'MongoDB', 'Mongoose','Redis', 'Socket.io','JWT', 'Axios','REST Apis', 'Multer', 'Postman', 'Git', 'GitHub'],
+  'TTPLINX – Construction Management ERP': ['Next.js', 'Tailwind css', 'Node.js', 'Express', 'MongoDB', 'Mongoose','Redis', 'Socket.io','JWT', 'Axios','REST Apis', 'Redux','Framer-Motion', 'Nodemailer', 'Multer', 'Postman', 'Git', 'GitHub'],
+  'Dreamviewer360 - HRMS platform': ['Next.js', 'Tailwind css', 'Node.js', 'Express', 'MongoDB', 'Mongoose','Redis', 'Socket.io','JWT', 'Axios','REST Apis', 'Redux', 'Multer', 'Postman', 'Git', 'GitHub'],
   'Trader\'s Blog': ['React.js', 'Node.js', 'Express', 'MongoDB','Redis', 'Recharts', 'TipTap', 'JWT', 'Axios', 'Postman', 'Git', 'GitHub', 'Responsive Design'],
   'NeoTreasure': ['React.js', 'Node.js', 'Express', 'MongoDB','Mongoose','Redux Toolkit', 'Tailwind CSS','ethers.js', 'JWT', 'WebSocket','OpenSea API', 'Axios','Postman', 'Git', 'GitHub','Framer Motion','Responsive Design'],
   'Techie-Tutorials': ['React.js', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS', 'Axios','Postman', 'Git', 'GitHub', 'TipTap','Rich Text Editor', 'Responsive Design'],
