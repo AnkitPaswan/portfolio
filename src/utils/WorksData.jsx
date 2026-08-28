@@ -13,8 +13,14 @@ import ttfixon from "../assets/images/ttfixon.png";
 
 const data = [
   {
+    name: "TTFIXON - Home Services Platform",
+    href: `https://www.ttfixon.in/`,
+    description:"Built TTFIXON, a full-stack on-demand home-services platform with customer, professional, and admin portals. Implemented real-time booking and job tracking, OTP verification, wallet and Razorpay payments, geolocation-based service zones, dynamic pricing/discounts, provider payouts, and analytics using Next.js, Node.js, Express, MongoDB, Redux Toolkit, and Socket.IO.",
+    img: ttfixon,
+  },
+  {
     name: "TTPLINX – Construction Management ERP",
-    href: `https://www.dreamviewer360.com/`,
+    href: `https://www.ttplanix.in/`,
     description:"Developed a full-stack, multi-tenant Construction ERP platform that centralizes project execution, procurement, workforce operations, inventory, finance, and stakeholder collaboration. Built role-based dashboards and secure portals for administrators, employees, clients, vendors, and subcontractors, with workflows for BOQ management, tenders/RFQs, purchase orders, attendance, payroll, approvals, invoicing, quality audits, and HSE compliance",
     img: ttpl,
   },

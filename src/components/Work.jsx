@@ -12,6 +12,7 @@ const categories = [
 ];
 
 const projectTechBadges = {
+  'TTFIXON - Home Services Platform': ['Next.js', 'Tailwind css', 'Node.js', 'Express', 'MongoDB', 'Mongoose','Redis', 'Socket.io','JWT', 'Axios','REST Apis', 'Redux','google/genai', 'Razorpay','CGPEY_API','MSG91','GOOGLE_MAPS_API', 'Nodemailer', 'Multer', 'Postman', 'Git', 'GitHub'],
   'TTPLINX – Construction Management ERP': ['Next.js', 'Tailwind css', 'Node.js', 'Express', 'MongoDB', 'Mongoose','Redis', 'Socket.io','JWT', 'Axios','REST Apis', 'Redux','Framer-Motion', 'Nodemailer', 'Multer', 'Postman', 'Git', 'GitHub'],
   'Dreamviewer360 - HRMS platform': ['Next.js', 'Tailwind css', 'Node.js', 'Express', 'MongoDB', 'Mongoose','Redis', 'Socket.io','JWT', 'Axios','REST Apis', 'Redux', 'Multer', 'Postman', 'Git', 'GitHub'],
   'Trader\'s Blog': ['React.js', 'Node.js', 'Express', 'MongoDB','Redis', 'Recharts', 'TipTap', 'JWT', 'Axios', 'Postman', 'Git', 'GitHub', 'Responsive Design'],
