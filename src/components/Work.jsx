@@ -34,7 +34,7 @@ const Work = () => {
     ? data 
     : data.filter(project => {
         if (activeCategory === 'fullstack') {
-          return ['Dreamviewer360','Trader\'s Blog','NeoTreasure', 'Techie-Tutorials', 'Tech-market', 'Vegan-food'].includes(project.name);
+          return ['TTFIXON - Home Services Platform','TTPLINX – Construction Management ERP','Dreamviewer360 - HRMS platform','Trader\'s Blog','NeoTreasure', 'Techie-Tutorials', 'Tech-market', 'Vegan-food'].includes(project.name);
         }
         if (activeCategory === 'frontend') {
           return ['Weather-Application', 'To-Do List', 'NewsPortal'].includes(project.name);
